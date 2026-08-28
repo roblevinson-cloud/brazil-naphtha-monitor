@@ -198,15 +198,32 @@ export function NaphthaMonitor() {
   };
 
   useEffect(() => {
-    const loadBundledSnapshot = async () => {
+    let cancelled = false;
+
+    const loadLatestSnapshot = async () => {
       try {
-        const response = await fetch("/data/dashboard.json", { cache: "no-store" });
-        if (response.ok) setData(await response.json() as MonitorData);
+        const response = await fetch(`${REMOTE_DATA_URL}?t=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error("remote feed unavailable");
+        if (!cancelled) {
+          setData(await response.json() as MonitorData);
+          setFeedState("live");
+        }
       } catch {
-        // The compiled snapshot remains available when a network is offline.
+        try {
+          const response = await fetch("data/dashboard.json", { cache: "no-store" });
+          if (response.ok && !cancelled) setData(await response.json() as MonitorData);
+        } catch {
+          // The compiled snapshot remains available when a network is offline.
+        }
       }
     };
-    void loadBundledSnapshot();
+
+    void loadLatestSnapshot();
+    const timer = window.setInterval(() => void loadLatestSnapshot(), 5 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
   }, []);
 
   const filteredArrivals = useMemo(() => {

@@ -1,5 +1,7 @@
 # Brazil Naphtha Monitor
 
+Live dashboard: [roblevinson-cloud.github.io/brazil-naphtha-monitor](https://roblevinson-cloud.github.io/brazil-naphtha-monitor/)
+
 A train-station-style monitor for identifiable naphtha calls into Brazil and a
 reconciled look-back at Braskem's 2026 imports.
 
@@ -25,7 +27,8 @@ substituted for one another.
 
 `scripts/update_data.py` downloads and harmonizes the first two sources into
 `public/data/dashboard.json`. The GitHub Actions workflow refreshes that snapshot
-every two hours and commits only when the data changes.
+every two hours and commits only when the data changes. Every push to `main`
+also rebuilds and republishes the public GitHub Pages site.
 
 ## Run locally
 
