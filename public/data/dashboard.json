@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-08T01:41:30-03:00",
+  "generated_at": "2026-09-08T08:23:20-03:00",
   "clearance_through": "2026-07-31",
   "arrivals": [
     {
       "id": "376862026",
       "vessel": "BRIGHT FUTURE",
-      "status": "discharging",
+      "status": "scheduled",
       "eta": "2026-09-02T15:00:00-03:00",
-      "etb": "2026-09-03T00:00:00-03:00",
-      "etd": "2026-09-04T00:00:00-03:00",
+      "etb": "2026-09-09T00:00:00-03:00",
+      "etd": "2026-09-10T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
-      "cargo_tonnes": 28000.0,
+      "cargo_tonnes": 29156.754,
       "dwt_tonnes": 74999,
       "operator": "Braskem S.A.",
       "cargo_origin": null,
