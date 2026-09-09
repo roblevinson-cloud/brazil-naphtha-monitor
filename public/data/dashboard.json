@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-09T09:59:15-03:00",
-  "clearance_through": "2026-07-31",
+  "generated_at": "2026-09-09T14:51:15-03:00",
+  "clearance_through": "2026-08-31",
   "arrivals": [
     {
       "id": "376862026",
@@ -8,7 +8,7 @@
       "status": "discharging",
       "eta": "2026-09-02T15:00:00-03:00",
       "etb": "2026-09-07T00:00:00-03:00",
-      "etd": "2026-09-08T00:00:00-03:00",
+      "etd": "2026-09-09T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 29156.754,
@@ -28,7 +28,7 @@
       "etd": "2026-09-14T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
-      "cargo_tonnes": 56000.0,
+      "cargo_tonnes": 57384.134,
       "dwt_tonnes": null,
       "operator": "Braskem S.A.",
       "cargo_origin": null,
@@ -50,6 +50,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "422132026",
+      "vessel": "ELANDRA MAPLE",
+      "status": "scheduled",
+      "eta": "2026-09-13T14:00:00-03:00",
+      "etb": "2026-09-16T00:00:00-03:00",
+      "etd": "2026-09-17T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 27000.0,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Liberia",
       "fleet": "third_party",
       "source": "CODEBA"
     }
@@ -285,6 +302,28 @@
         {
           "name": "Argentina",
           "kt": 24825.037
+        }
+      ],
+      "basis": "customs"
+    },
+    {
+      "month": 8,
+      "label": "Aug",
+      "bahia_kt": 128610.440276,
+      "rio_grande_do_sul_kt": 111783.223,
+      "total_kt": 240393.663276,
+      "origins": [
+        {
+          "name": "United States",
+          "kt": 128610.440276
+        },
+        {
+          "name": "Argelia",
+          "kt": 85411.854
+        },
+        {
+          "name": "Argentina",
+          "kt": 26371.369
         }
       ],
       "basis": "customs"
