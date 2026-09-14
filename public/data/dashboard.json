@@ -1,31 +1,14 @@
 {
-  "generated_at": "2026-09-14T02:03:54-03:00",
+  "generated_at": "2026-09-14T09:53:12-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
-      "id": "418622026",
-      "vessel": "PINE OLIA",
-      "status": "discharging",
-      "eta": "2026-09-03T05:00:00-03:00",
-      "etb": "2026-09-12T00:00:00-03:00",
-      "etd": "2026-09-13T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 27000.0,
-      "dwt_tonnes": 50275,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Marshall Islands",
-      "fleet": "third_party",
-      "source": "CODEBA"
-    },
-    {
       "id": "428772026",
       "vessel": "CIELO BIANCO",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-09-13T08:00:00-03:00",
-      "etb": "2026-09-19T00:00:00-03:00",
-      "etd": "2026-09-20T00:00:00-03:00",
+      "etb": "2026-09-15T00:00:00-03:00",
+      "etd": "2026-09-16T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 57384.134,
@@ -39,7 +22,7 @@
     {
       "id": "422132026",
       "vessel": "ELANDRA MAPLE",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-09-13T14:00:00-03:00",
       "etb": "2026-09-20T00:00:00-03:00",
       "etd": "2026-09-21T00:00:00-03:00",
@@ -172,6 +155,23 @@
       "cargo_origin": null,
       "vessel_flag": "Luxembourg",
       "fleet": "future",
+      "source": "CODEBA"
+    },
+    {
+      "id": "418622026",
+      "vessel": "PINE OLIA",
+      "status": "completed",
+      "eta": "2026-09-03T05:00:00-03:00",
+      "etb": "2026-09-12T00:00:00-03:00",
+      "etd": "2026-09-13T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 27000.0,
+      "dwt_tonnes": 50275,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
       "source": "CODEBA"
     }
   ],
