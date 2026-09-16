@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-16T04:43:27-03:00",
+  "generated_at": "2026-09-16T10:31:49-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
       "id": "428772026",
       "vessel": "CIELO BIANCO",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-09-13T08:00:00-03:00",
       "etb": "2026-09-15T00:00:00-03:00",
       "etd": "2026-09-16T00:00:00-03:00",
@@ -33,6 +33,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Liberia",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "443822026",
+      "vessel": "PINE OLIA",
+      "status": "scheduled",
+      "eta": "2026-09-22T06:00:00-03:00",
+      "etb": "",
+      "etd": "2026-09-23T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 0.0,
+      "dwt_tonnes": 50275,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
       "source": "CODEBA"
     }
