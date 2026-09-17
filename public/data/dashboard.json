@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-17T04:43:08-03:00",
+  "generated_at": "2026-09-17T10:30:58-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
       "id": "428772026",
       "vessel": "CIELO BIANCO",
-      "status": "discharging",
+      "status": "scheduled",
       "eta": "2026-09-13T08:00:00-03:00",
-      "etb": "2026-09-15T00:00:00-03:00",
-      "etd": "2026-09-16T00:00:00-03:00",
+      "etb": "2026-09-19T00:00:00-03:00",
+      "etd": "2026-09-20T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 57384.134,
