@@ -139,6 +139,7 @@ def translate_origin(value: object) -> str:
         "ESTADOS UNIDOS": "United States",
         "CANARIAS": "Canary Islands",
         "HOLANDA (PAISES BAIXOS)": "Netherlands",
+        "ARGELIA": "Algeria",
         "ARGENTINA": "Argentina",
     }.get(origin, clean(value).title())
 
@@ -154,13 +155,15 @@ def parse_clearances(path_or_bytes: Path | bytes) -> tuple[list[dict], str]:
         month_number = int(month)
         entry = grouped.setdefault(month_number, {"bahia": 0.0, "rs": 0.0, "origins": {}})
         office = clean(customs_office).upper()
-        tonnes = float(kilos or 0) / 1000
+        # Dashboard fields are expressed in kilotonnes. The ANP workbook is
+        # expressed in kilograms, so divide by one million (not one thousand).
+        kilotonnes = float(kilos or 0) / 1_000_000
         if "SALVADOR" in office:
-            entry["bahia"] += tonnes
+            entry["bahia"] += kilotonnes
         elif "PORTO ALEGRE" in office:
-            entry["rs"] += tonnes
+            entry["rs"] += kilotonnes
         origin_name = translate_origin(origin)
-        entry["origins"][origin_name] = entry["origins"].get(origin_name, 0.0) + tonnes
+        entry["origins"][origin_name] = entry["origins"].get(origin_name, 0.0) + kilotonnes
 
     month_labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     monthly = []

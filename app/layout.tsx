@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const image = `${protocol}://${host}/og.png`;
   const title = "Brazil Naphtha Monitor";
-  const description = "Live vessel arrivals and reconciled 2026 Braskem naphtha import history for Brazil.";
+  const description = "Live vessel arrivals, reconciled 2026 Braskem naphtha imports, and Brazil cracker supply analysis.";
   return {
     title,
     description,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T14:42:38-03:00",
+  "generated_at": "2026-09-18T16:49:18-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
@@ -163,7 +163,7 @@
       "status": "completed",
       "eta": "2026-08-24T10:24:00-03:00",
       "etb": "2026-08-31T00:00:00-03:00",
-      "etd": "2026-09-02T00:00:00-03:00",
+      "etd": "2026-09-01T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 36369.299,
@@ -179,33 +179,16 @@
       "vessel": "BRIGHT FUTURE",
       "status": "completed",
       "eta": "2026-09-02T15:00:00-03:00",
-      "etb": "2026-09-07T00:00:00-03:00",
-      "etd": "2026-09-09T00:00:00-03:00",
+      "etb": "2026-09-04T00:00:00-03:00",
+      "etd": "2026-09-05T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
-      "cargo_tonnes": 29156.754,
+      "cargo_tonnes": 28000.0,
       "dwt_tonnes": 74999,
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Luxembourg",
       "fleet": "future",
-      "source": "CODEBA"
-    },
-    {
-      "id": "418622026",
-      "vessel": "PINE OLIA",
-      "status": "completed",
-      "eta": "2026-09-03T05:00:00-03:00",
-      "etb": "2026-09-12T00:00:00-03:00",
-      "etd": "2026-09-13T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 27000.0,
-      "dwt_tonnes": 50275,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Marshall Islands",
-      "fleet": "third_party",
       "source": "CODEBA"
     }
   ],
@@ -213,17 +196,17 @@
     {
       "month": 1,
       "label": "Jan",
-      "bahia_kt": 141394.779,
-      "rio_grande_do_sul_kt": 139609.066,
-      "total_kt": 281003.845,
+      "bahia_kt": 141.394779,
+      "rio_grande_do_sul_kt": 139.609066,
+      "total_kt": 281.003845,
       "origins": [
         {
           "name": "United States",
-          "kt": 222474.91
+          "kt": 222.47491
         },
         {
           "name": "Canary Islands",
-          "kt": 58528.935
+          "kt": 58.528935
         }
       ],
       "basis": "customs"
@@ -231,17 +214,17 @@
     {
       "month": 2,
       "label": "Feb",
-      "bahia_kt": 150524.913,
-      "rio_grande_do_sul_kt": 160046.026,
-      "total_kt": 310570.939,
+      "bahia_kt": 150.524913,
+      "rio_grande_do_sul_kt": 160.046026,
+      "total_kt": 310.570939,
       "origins": [
         {
           "name": "United States",
-          "kt": 274462.003
+          "kt": 274.462003
         },
         {
           "name": "Canary Islands",
-          "kt": 36108.936
+          "kt": 36.108936
         }
       ],
       "basis": "customs"
@@ -249,17 +232,17 @@
     {
       "month": 3,
       "label": "Mar",
-      "bahia_kt": 237502.883,
-      "rio_grande_do_sul_kt": 82758.579,
-      "total_kt": 320261.462,
+      "bahia_kt": 237.502883,
+      "rio_grande_do_sul_kt": 82.758579,
+      "total_kt": 320.261462,
       "origins": [
         {
           "name": "United States",
-          "kt": 282699.778
+          "kt": 282.699778
         },
         {
           "name": "Canary Islands",
-          "kt": 37561.684
+          "kt": 37.561684
         }
       ],
       "basis": "customs"
@@ -267,17 +250,17 @@
     {
       "month": 4,
       "label": "Apr",
-      "bahia_kt": 93686.134,
-      "rio_grande_do_sul_kt": 112636.681,
-      "total_kt": 206322.815,
+      "bahia_kt": 93.686134,
+      "rio_grande_do_sul_kt": 112.636681,
+      "total_kt": 206.322815,
       "origins": [
         {
           "name": "United States",
-          "kt": 169922.025
+          "kt": 169.922025
         },
         {
           "name": "Canary Islands",
-          "kt": 36400.79
+          "kt": 36.40079
         }
       ],
       "basis": "customs"
@@ -285,17 +268,17 @@
     {
       "month": 5,
       "label": "May",
-      "bahia_kt": 95245.213,
+      "bahia_kt": 95.245213,
       "rio_grande_do_sul_kt": 0.0,
-      "total_kt": 95245.213,
+      "total_kt": 95.245213,
       "origins": [
         {
           "name": "United States",
-          "kt": 57965.585
+          "kt": 57.965585
         },
         {
           "name": "Netherlands",
-          "kt": 37279.628
+          "kt": 37.279628
         }
       ],
       "basis": "customs"
@@ -303,17 +286,17 @@
     {
       "month": 6,
       "label": "Jun",
-      "bahia_kt": 205791.905,
+      "bahia_kt": 205.791905,
       "rio_grande_do_sul_kt": 0.0,
-      "total_kt": 205791.905,
+      "total_kt": 205.791905,
       "origins": [
         {
           "name": "United States",
-          "kt": 170718.379
+          "kt": 170.718379
         },
         {
           "name": "Canary Islands",
-          "kt": 35073.526
+          "kt": 35.073526
         }
       ],
       "basis": "customs"
@@ -321,21 +304,21 @@
     {
       "month": 7,
       "label": "Jul",
-      "bahia_kt": 152168.904,
-      "rio_grande_do_sul_kt": 24825.037,
-      "total_kt": 176993.941,
+      "bahia_kt": 152.168904,
+      "rio_grande_do_sul_kt": 24.825037,
+      "total_kt": 176.993941,
       "origins": [
         {
           "name": "United States",
-          "kt": 115621.163
+          "kt": 115.621163
         },
         {
           "name": "Canary Islands",
-          "kt": 36547.741
+          "kt": 36.547741
         },
         {
           "name": "Argentina",
-          "kt": 24825.037
+          "kt": 24.825037
         }
       ],
       "basis": "customs"
@@ -343,21 +326,21 @@
     {
       "month": 8,
       "label": "Aug",
-      "bahia_kt": 128610.440276,
-      "rio_grande_do_sul_kt": 111783.223,
-      "total_kt": 240393.663276,
+      "bahia_kt": 128.61044,
+      "rio_grande_do_sul_kt": 111.783223,
+      "total_kt": 240.393663,
       "origins": [
         {
           "name": "United States",
-          "kt": 128610.440276
+          "kt": 128.61044
         },
         {
-          "name": "Argelia",
-          "kt": 85411.854
+          "name": "Algeria",
+          "kt": 85.411854
         },
         {
           "name": "Argentina",
-          "kt": 26371.369
+          "kt": 26.371369
         }
       ],
       "basis": "customs"

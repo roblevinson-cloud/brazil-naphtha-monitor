@@ -5,6 +5,11 @@ Live dashboard: [roblevinson-cloud.github.io/brazil-naphtha-monitor](https://rob
 A train-station-style monitor for identifiable naphtha calls into Brazil and a
 reconciled look-back at Braskem's 2026 imports.
 
+The **Crackers & supply** view adds Braskem's four Brazilian fossil-ethylene
+complexes, estimated 2023–2025 site utilization, physical feed routes,
+counterparty dependence, the 2026 Petrobras contract reset and the implied
+overseas supply requirement.
+
 The dashboard keeps three different states separate:
 
 - **Scheduled / underway:** near-real-time CODEBA vessel calls for Aratu,
