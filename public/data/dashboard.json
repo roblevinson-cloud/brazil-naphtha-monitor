@@ -1,30 +1,13 @@
 {
-  "generated_at": "2026-09-23T04:47:25-03:00",
+  "generated_at": "2026-09-23T10:40:26-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
-      "id": "428772026",
-      "vessel": "CIELO BIANCO",
-      "status": "discharging",
-      "eta": "2026-09-13T08:00:00-03:00",
-      "etb": "2026-09-20T00:00:00-03:00",
-      "etd": "2026-09-21T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 57384.134,
-      "dwt_tonnes": null,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Liberia",
-      "fleet": "third_party",
-      "source": "CODEBA"
-    },
-    {
       "id": "422132026",
       "vessel": "ELANDRA MAPLE",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-09-13T14:00:00-03:00",
-      "etb": "2026-09-24T00:00:00-03:00",
+      "etb": "2026-09-23T00:00:00-03:00",
       "etd": "2026-09-25T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
@@ -206,6 +189,23 @@
       "cargo_origin": null,
       "vessel_flag": "Luxembourg",
       "fleet": "future",
+      "source": "CODEBA"
+    },
+    {
+      "id": "428772026",
+      "vessel": "CIELO BIANCO",
+      "status": "completed",
+      "eta": "2026-09-13T08:00:00-03:00",
+      "etb": "2026-09-20T00:00:00-03:00",
+      "etd": "2026-09-21T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 57384.134,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Liberia",
+      "fleet": "third_party",
       "source": "CODEBA"
     }
   ],
