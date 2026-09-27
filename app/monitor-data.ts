@@ -26,12 +26,19 @@ export type MonthlyDelivery = {
   basis: "customs" | "vessel_provisional";
 };
 
+export type AnnualHistory = {
+  year: number;
+  clearance_through: string;
+  monthly: MonthlyDelivery[];
+};
+
 export type MonitorData = {
   generated_at: string;
   clearance_through: string;
   arrivals: Arrival[];
   completed_vessels: Arrival[];
   monthly: MonthlyDelivery[];
+  annual_history?: AnnualHistory[];
 };
 
 export const initialData: MonitorData = {

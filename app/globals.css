@@ -129,6 +129,21 @@ main { width: min(1540px, 100%); min-height: 100vh; margin: 0 auto; padding: 28p
 .basis { display: inline-block; width: max-content; padding: 5px 7px; border-radius: 2px; font: 700 8px monospace; letter-spacing: .06em; }
 .basis.official { background: #e4f5e6; color: #24752f; }
 .basis.provisional { background: #fff0c7; color: #87600b; }
+.comparison-card { margin-top: 18px; padding: 28px 30px 24px; overflow-x: auto; border: 1px solid var(--line); background: var(--ink); color: #fff; }
+.comparison-card .eyebrow, .comparison-card .estimate-key { color: #9da4b2; }
+.comparison-card .chart-title h3 { color: #fff; }
+.comparison-rows { display: grid; gap: 1px; min-width: 760px; margin-top: 26px; background: #343a49; }
+.comparison-row { display: grid; grid-template-columns: 70px minmax(280px, 1fr) 145px 170px; align-items: center; gap: 20px; min-height: 78px; padding: 15px 18px; background: var(--ink-2); }
+.comparison-row > strong { color: var(--acid); font: 800 21px monospace; }
+.comparison-row > div:last-child { padding-left: 18px; border-left: 1px solid #3b4252; }
+.comparison-row b { display: block; font-size: 15px; }
+.comparison-row span { display: block; margin-top: 5px; color: #9fa6b3; font-size: 12px; }
+.comparison-track { height: 18px; background: #303747; }
+.comparison-track i { display: block; height: 100%; background: var(--acid); }
+.comparison-card .chart-note { color: #9fa6b3; }
+.history-year-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 26px; }
+.history-year-row > span { color: #6c7068; font: 700 11px monospace; letter-spacing: .12em; }
+.history-year-switch { justify-content: flex-end; }
 .weekly-card { padding-bottom: 30px; }
 .weekly-rows { display: grid; gap: 22px; margin-top: 36px; }
 .weekly-row { display: grid; grid-template-columns: 170px 1fr 80px; align-items: center; gap: 18px; }
@@ -229,6 +244,7 @@ main { width: min(1540px, 100%); min-height: 100vh; margin: 0 auto; padding: 28p
   .split-labels { align-items: flex-end; }
   .split-labels span:last-child { text-align: right; }
   .chart-card, .weekly-card { padding: 22px 16px; overflow-x: auto; }
+  .comparison-card { padding: 22px 16px; }
   .chart-title { flex-direction: column; }
   .bars { min-width: 650px; }
   .weekly-rows { min-width: 580px; }
@@ -236,4 +252,6 @@ main { width: min(1540px, 100%); min-height: 100vh; margin: 0 auto; padding: 28p
   .rules-card ol { grid-template-columns: 1fr; }
   .analysis-title { align-items: flex-start; flex-direction: column; }
   .contract-callout { grid-template-columns: 1fr; }
+  .history-year-row { align-items: flex-start; flex-direction: column; }
+  .history-year-switch { justify-content: flex-start; }
 }

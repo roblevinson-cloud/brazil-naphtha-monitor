@@ -187,12 +187,12 @@ function ArrivalBoard({ items }: { items: Arrival[] }) {
   );
 }
 
-function MonthlyChart({ months }: { months: MonthlyDelivery[] }) {
+function MonthlyChart({ months, year }: { months: MonthlyDelivery[]; year: number }) {
   const max = Math.max(...months.map((month) => month.total_kt), 1);
   return (
     <div className="chart-card">
       <div className="chart-title">
-        <div><p className="eyebrow">CUSTOMS-CLEARED IMPORTS</p><h3>Monthly Braskem naphtha</h3></div>
+        <div><p className="eyebrow">CUSTOMS-CLEARED IMPORTS · {year}</p><h3>Monthly Braskem naphtha</h3></div>
         <div className="legend"><span><i className="legend-ba" /> Bahia</span><span><i className="legend-rs" /> Rio Grande do Sul</span></div>
       </div>
       <div className="bars" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(54px, 1fr))` }} aria-label="Monthly naphtha deliveries chart">
@@ -212,11 +212,11 @@ function MonthlyChart({ months }: { months: MonthlyDelivery[] }) {
   );
 }
 
-function HistoryTable({ months, provisional, provisionalLabel }: { months: MonthlyDelivery[]; provisional: number; provisionalLabel: string }) {
+function HistoryTable({ year, months, provisional, provisionalLabel }: { year: number; months: MonthlyDelivery[]; provisional: number; provisionalLabel: string }) {
   return (
     <div className="history-table-wrap">
       <table className="history-table">
-        <thead><tr><th>2026</th><th>Bahia</th><th>Rio Grande do Sul</th><th>Total</th><th>Reported origins</th><th>Basis</th></tr></thead>
+        <thead><tr><th>{year}</th><th>Bahia</th><th>Rio Grande do Sul</th><th>Total</th><th>Reported origins</th><th>Basis</th></tr></thead>
         <tbody>
           {months.map((month) => (
             <tr key={month.month}>
@@ -254,6 +254,47 @@ function WeeklyChart({ items }: { items: Arrival[] }) {
       </div>
       <p className="chart-note">Weekly coverage starts with the monitor&apos;s August vessel archive. Customs data controls the monthly total because the ANP file reports the clearance month, not the clearance day.</p>
     </div>
+  );
+}
+
+function AnnualComparison({ histories, cutoffMonth }: { histories: NonNullable<MonitorData["annual_history"]>; cutoffMonth: number }) {
+  const ordered = [...histories].sort((a, b) => b.year - a.year);
+  const rows = ordered.map((history) => {
+    const comparable = sum(history.monthly.filter((month) => month.month <= cutoffMonth).map((month) => month.total_kt));
+    const available = sum(history.monthly.map((month) => month.total_kt));
+    const prior = histories.find((item) => item.year === history.year - 1);
+    const priorComparable = prior ? sum(prior.monthly.filter((month) => month.month <= cutoffMonth).map((month) => month.total_kt)) : 0;
+    return {
+      ...history,
+      comparable,
+      available,
+      change: priorComparable > 0 ? ((comparable / priorComparable) - 1) * 100 : null,
+    };
+  });
+  const max = Math.max(...rows.map((row) => row.comparable), 1);
+  const cutoffLabel = rows.at(0)?.monthly.find((month) => month.month === cutoffMonth)?.label || "current cutoff";
+
+  return (
+    <section className="comparison-card" aria-label={`Annual comparison through ${cutoffLabel}`}>
+      <div className="chart-title">
+        <div><p className="eyebrow">LIKE-FOR-LIKE COMPARISON</p><h3>January–{cutoffLabel} customs imports</h3></div>
+        <span className="estimate-key">Same eight-month window</span>
+      </div>
+      <div className="comparison-rows">
+        {rows.map((row) => {
+          const lastLabel = row.monthly.at(-1)?.label || "—";
+          return (
+            <div className="comparison-row" key={row.year}>
+              <strong>{row.year}</strong>
+              <div className="comparison-track"><i style={{ width: `${(row.comparable / max) * 100}%` }} /></div>
+              <div><b>{fmtKt(row.comparable)} kt</b><span>{row.change === null ? "Base year" : `${row.change >= 0 ? "+" : ""}${fmtKt(row.change)}% YoY`}</span></div>
+              <div><b>{fmtKt(row.available)} kt</b><span>Available through {lastLabel}</span></div>
+            </div>
+          );
+        })}
+      </div>
+      <p className="chart-note">The primary comparison uses the same January–{cutoffLabel} window for every year. The final column shows all months currently present in each ANP workbook; the 2025 file is available through September.</p>
+    </section>
   );
 }
 
@@ -297,6 +338,7 @@ export function NaphthaMonitor() {
   const [data, setData] = useState<MonitorData>(initialData);
   const [tab, setTab] = useState<"arrivals" | "history" | "supply" | "ledger">("arrivals");
   const [period, setPeriod] = useState<"monthly" | "weekly">("monthly");
+  const [historyYear, setHistoryYear] = useState(2026);
   const [port, setPort] = useState<"all" | "aratu" | "osorio">("all");
   const [feedState, setFeedState] = useState<"snapshot" | "refreshing" | "live">("snapshot");
 
@@ -339,6 +381,12 @@ export function NaphthaMonitor() {
     const needle = port === "aratu" ? "Aratu" : "Osório";
     return data.arrivals.filter((item) => item.port.includes(needle));
   }, [data.arrivals, port]);
+
+  const annualHistory = useMemo(() => {
+    const fallback = [{ year: 2026, clearance_through: data.clearance_through, monthly: data.monthly }];
+    return [...(data.annual_history?.length ? data.annual_history : fallback)].sort((a, b) => b.year - a.year);
+  }, [data.annual_history, data.clearance_through, data.monthly]);
+  const selectedHistory = annualHistory.find((history) => history.year === historyYear) || annualHistory[0];
 
   const completedKt = sum(data.completed_vessels.map((item) => item.cargo_tonnes)) / 1000;
   const underwayKt = sum(data.arrivals.filter((item) => item.status === "discharging").map((item) => item.cargo_tonnes)) / 1000;
@@ -409,14 +457,19 @@ export function NaphthaMonitor() {
       </>}
 
       {tab === "history" && <>
-        <section className="section-head"><div><p className="eyebrow accent">2026 RECONCILIATION</p><h2>One controlling monthly record.</h2><p className="lede">NCM 27101241 · Braskem S.A. · kilograms cleared through Salvador and Porto Alegre customs.</p></div><div className="period-switch"><button className={period === "monthly" ? "active" : ""} onClick={() => setPeriod("monthly")}>Monthly</button><button className={period === "weekly" ? "active" : ""} onClick={() => setPeriod("weekly")}>Weekly</button></div></section>
+        <section className="section-head"><div><p className="eyebrow accent">2024–2026 RECONCILIATION</p><h2>One controlling monthly record.</h2><p className="lede">NCM 27101241 · Braskem S.A. · kilograms cleared through Salvador and Porto Alegre customs.</p></div><div className="period-switch"><button className={period === "monthly" ? "active" : ""} onClick={() => setPeriod("monthly")}>Monthly</button><button className={period === "weekly" ? "active" : ""} onClick={() => setPeriod("weekly")}>Weekly</button></div></section>
         <section className="metric-grid history-metrics">
           <Metric label={`2026 YTD · JAN–${clearanceMonth.toUpperCase()}`} value={fmtKt(ytd)} unit="KT" detail="Exact customs kilograms" tone="dark" />
           <Metric label="TRAILING 30-DAY PROXY" value={fmtKt(latestMonth?.total_kt || 0)} unit="KT" detail={`${clearanceMonth} completed month`} />
           <Metric label="TRAILING 90-DAY PROXY" value={fmtKt(latest90)} unit="KT" detail={`${latest90Range.at(0)}–${latest90Range.at(-1)} completed months`} />
           <Metric label="90D VS PRIOR 90D" value={`${change90 >= 0 ? "+" : ""}${fmtKt(change90)}%`} detail={`${trendLabel} vs ${prior90Range.at(0)}–${prior90Range.at(-1)}`} tone="acid" />
         </section>
-        {period === "monthly" ? <><MonthlyChart months={data.monthly} /><HistoryTable months={data.monthly} provisional={provisionalKt} provisionalLabel={nextCloseMonth} /></> : <WeeklyChart items={data.completed_vessels} />}
+        {period === "monthly" ? <>
+          <AnnualComparison histories={annualHistory} cutoffMonth={latestMonth?.month || 12} />
+          <div className="history-year-row"><span>DETAILED HISTORY</span><div className="period-switch history-year-switch">{annualHistory.map((history) => <button key={history.year} className={selectedHistory.year === history.year ? "active" : ""} onClick={() => setHistoryYear(history.year)}>{history.year}</button>)}</div></div>
+          <MonthlyChart months={selectedHistory.monthly} year={selectedHistory.year} />
+          <HistoryTable year={selectedHistory.year} months={selectedHistory.monthly} provisional={selectedHistory.year === 2026 ? provisionalKt : 0} provisionalLabel={nextCloseMonth} />
+        </> : <WeeklyChart items={data.completed_vessels} />}
       </>}
 
       {tab === "supply" && <>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T09:50:51-03:00",
+  "generated_at": "2026-09-27T10:11:07-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
@@ -395,6 +395,624 @@
         }
       ],
       "basis": "customs"
+    }
+  ],
+  "annual_history": [
+    {
+      "year": 2024,
+      "clearance_through": "2024-12-31",
+      "monthly": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "bahia_kt": 233.156868,
+          "rio_grande_do_sul_kt": 116.766562,
+          "total_kt": 349.92343,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 292.189803
+            },
+            {
+              "name": "Spain",
+              "kt": 57.733627
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "bahia_kt": 120.064496,
+          "rio_grande_do_sul_kt": 132.609655,
+          "total_kt": 252.674151,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 106.796178
+            },
+            {
+              "name": "Algeria",
+              "kt": 83.33015
+            },
+            {
+              "name": "Spain",
+              "kt": 62.547823
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "bahia_kt": 272.472579,
+          "rio_grande_do_sul_kt": 86.358241,
+          "total_kt": 358.83082,
+          "origins": [
+            {
+              "name": "Algeria",
+              "kt": 122.451287
+            },
+            {
+              "name": "United States",
+              "kt": 109.837997
+            },
+            {
+              "name": "Italy",
+              "kt": 56.741878
+            },
+            {
+              "name": "Spain",
+              "kt": 35.824046
+            },
+            {
+              "name": "Nigeria",
+              "kt": 33.975612
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "bahia_kt": 169.678472,
+          "rio_grande_do_sul_kt": 145.552218,
+          "total_kt": 315.23069,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 166.502614
+            },
+            {
+              "name": "Algeria",
+              "kt": 58.602881
+            },
+            {
+              "name": "Spain",
+              "kt": 55.276835
+            },
+            {
+              "name": "Peru",
+              "kt": 34.84836
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "bahia_kt": 331.620265,
+          "rio_grande_do_sul_kt": 0.0,
+          "total_kt": 331.620265,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 230.486875
+            },
+            {
+              "name": "Angola",
+              "kt": 65.967142
+            },
+            {
+              "name": "Spain",
+              "kt": 35.166248
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "bahia_kt": 214.545464,
+          "rio_grande_do_sul_kt": 112.621709,
+          "total_kt": 327.167173,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 220.355471
+            },
+            {
+              "name": "Spain",
+              "kt": 56.679339
+            },
+            {
+              "name": "Italy",
+              "kt": 50.132363
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "bahia_kt": 165.12661,
+          "rio_grande_do_sul_kt": 140.420894,
+          "total_kt": 305.547504,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 106.891799
+            },
+            {
+              "name": "Spain",
+              "kt": 93.635264
+            },
+            {
+              "name": "Algeria",
+              "kt": 85.702756
+            },
+            {
+              "name": "Angola",
+              "kt": 19.317685
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "bahia_kt": 221.360606,
+          "rio_grande_do_sul_kt": 194.994074,
+          "total_kt": 416.35468,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 218.763642
+            },
+            {
+              "name": "Algeria",
+              "kt": 140.779991
+            },
+            {
+              "name": "Spain",
+              "kt": 56.811047
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "bahia_kt": 169.247447,
+          "rio_grande_do_sul_kt": 55.942455,
+          "total_kt": 225.189902,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 168.405753
+            },
+            {
+              "name": "Spain",
+              "kt": 56.784149
+            },
+            {
+              "name": "Finland",
+              "kt": 0.689994
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "bahia_kt": 150.57481,
+          "rio_grande_do_sul_kt": 58.512513,
+          "total_kt": 209.087323,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 92.844346
+            },
+            {
+              "name": "Algeria",
+              "kt": 58.512513
+            },
+            {
+              "name": "Spain",
+              "kt": 57.730464
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 11,
+          "label": "Nov",
+          "bahia_kt": 104.012623,
+          "rio_grande_do_sul_kt": 55.516923,
+          "total_kt": 159.529546,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 102.326501
+            },
+            {
+              "name": "Spain",
+              "kt": 57.203045
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 12,
+          "label": "Dec",
+          "bahia_kt": 227.772077,
+          "rio_grande_do_sul_kt": 84.706535,
+          "total_kt": 312.478612,
+          "origins": [
+            {
+              "name": "Algeria",
+              "kt": 123.08176
+            },
+            {
+              "name": "United States",
+              "kt": 117.935973
+            },
+            {
+              "name": "Spain",
+              "kt": 71.460879
+            }
+          ],
+          "basis": "customs"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "clearance_through": "2025-09-30",
+      "monthly": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "bahia_kt": 279.06718,
+          "rio_grande_do_sul_kt": 163.687343,
+          "total_kt": 442.754523,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 277.539872
+            },
+            {
+              "name": "Algeria",
+              "kt": 84.224851
+            },
+            {
+              "name": "Spain",
+              "kt": 57.032307
+            },
+            {
+              "name": "Angola",
+              "kt": 23.957493
+            },
+            {
+              "name": "Finland",
+              "kt": 2.090262
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "bahia_kt": 167.251948,
+          "rio_grande_do_sul_kt": 85.270609,
+          "total_kt": 252.522557,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 163.587454
+            },
+            {
+              "name": "Spain",
+              "kt": 56.341765
+            },
+            {
+              "name": "Peru",
+              "kt": 32.593338
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "bahia_kt": 155.284839,
+          "rio_grande_do_sul_kt": 85.92465,
+          "total_kt": 241.209489,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 110.727801
+            },
+            {
+              "name": "Algeria",
+              "kt": 85.92465
+            },
+            {
+              "name": "Spain",
+              "kt": 32.200161
+            },
+            {
+              "name": "Argentina",
+              "kt": 12.356877
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "bahia_kt": 111.166639,
+          "rio_grande_do_sul_kt": 147.861749,
+          "total_kt": 259.028388,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 222.875484
+            },
+            {
+              "name": "Algeria",
+              "kt": 36.152904
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "bahia_kt": 70.987545,
+          "rio_grande_do_sul_kt": 139.496831,
+          "total_kt": 210.484376,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 88.542265
+            },
+            {
+              "name": "Algeria",
+              "kt": 85.787392
+            },
+            {
+              "name": "Spain",
+              "kt": 36.154719
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "bahia_kt": 54.746213,
+          "rio_grande_do_sul_kt": 0.0,
+          "total_kt": 54.746213,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 54.746213
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "bahia_kt": 57.371065,
+          "rio_grande_do_sul_kt": 53.810881,
+          "total_kt": 111.181946,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 111.181946
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "bahia_kt": 0.0,
+          "rio_grande_do_sul_kt": 4.248152,
+          "total_kt": 4.248152,
+          "origins": [
+            {
+              "name": "Peru",
+              "kt": 4.248152
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "bahia_kt": 35.811278,
+          "rio_grande_do_sul_kt": 0.0,
+          "total_kt": 35.811278,
+          "origins": [
+            {
+              "name": "Angola",
+              "kt": 35.811278
+            }
+          ],
+          "basis": "customs"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "clearance_through": "2026-08-31",
+      "monthly": [
+        {
+          "month": 1,
+          "label": "Jan",
+          "bahia_kt": 141.394779,
+          "rio_grande_do_sul_kt": 139.609066,
+          "total_kt": 281.003845,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 222.47491
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 58.528935
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 2,
+          "label": "Feb",
+          "bahia_kt": 150.524913,
+          "rio_grande_do_sul_kt": 160.046026,
+          "total_kt": 310.570939,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 274.462003
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 36.108936
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 3,
+          "label": "Mar",
+          "bahia_kt": 237.502883,
+          "rio_grande_do_sul_kt": 82.758579,
+          "total_kt": 320.261462,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 282.699778
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 37.561684
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 4,
+          "label": "Apr",
+          "bahia_kt": 93.686134,
+          "rio_grande_do_sul_kt": 112.636681,
+          "total_kt": 206.322815,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 169.922025
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 36.40079
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 5,
+          "label": "May",
+          "bahia_kt": 95.245213,
+          "rio_grande_do_sul_kt": 0.0,
+          "total_kt": 95.245213,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 57.965585
+            },
+            {
+              "name": "Netherlands",
+              "kt": 37.279628
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 6,
+          "label": "Jun",
+          "bahia_kt": 205.791905,
+          "rio_grande_do_sul_kt": 0.0,
+          "total_kt": 205.791905,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 170.718379
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 35.073526
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 7,
+          "label": "Jul",
+          "bahia_kt": 152.168904,
+          "rio_grande_do_sul_kt": 24.825037,
+          "total_kt": 176.993941,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 115.621163
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 36.547741
+            },
+            {
+              "name": "Argentina",
+              "kt": 24.825037
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 8,
+          "label": "Aug",
+          "bahia_kt": 128.61044,
+          "rio_grande_do_sul_kt": 111.783223,
+          "total_kt": 240.393663,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 128.61044
+            },
+            {
+              "name": "Algeria",
+              "kt": 85.411854
+            },
+            {
+              "name": "Argentina",
+              "kt": 26.371369
+            }
+          ],
+          "basis": "customs"
+        }
+      ]
     }
   ]
 }

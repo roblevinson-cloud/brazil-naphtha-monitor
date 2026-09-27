@@ -3,7 +3,7 @@
 Live dashboard: [roblevinson-cloud.github.io/brazil-naphtha-monitor](https://roblevinson-cloud.github.io/brazil-naphtha-monitor/)
 
 A train-station-style monitor for identifiable naphtha calls into Brazil and a
-reconciled look-back at Braskem's 2026 imports.
+reconciled look-back at Braskem's 2024–2026 imports.
 
 The **Crackers & supply** view adds Braskem's four Brazilian fossil-ethylene
 complexes, estimated 2023–2025 site utilization, physical feed routes,
@@ -17,7 +17,8 @@ The dashboard keeps three different states separate:
 - **Completed physical calls:** port-call tonnes that have finished discharge,
   retained as a provisional weekly record.
 - **Customs closed:** ANP customs kilograms for Braskem and NCM 27101241. This is
-  the controlling monthly record for YTD, origin country and 30/90-day metrics.
+  the controlling monthly record for YTD, origin country, 30/90-day metrics and
+  year-over-year comparisons.
 
 Planned cargo, vessel DWT and customs-cleared mass are intentionally never
 substituted for one another.

@@ -19,7 +19,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "public" / "data" / "dashboard.json"
-ANP_CLEARANCES = "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx"
+ANP_CLEARANCES = {
+    year: f"https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-{year}.xlsx"
+    for year in (2024, 2025, 2026)
+}
 CODEBA_ARATU = "https://codeba.gov.br/eficiente/sites/portalcodeba/pt-br/porto_aratu.php?secao=tportos_aratu"
 
 DWT = {
@@ -139,17 +142,33 @@ def translate_origin(value: object) -> str:
         "ESTADOS UNIDOS": "United States",
         "CANARIAS": "Canary Islands",
         "HOLANDA (PAISES BAIXOS)": "Netherlands",
+        "PAISES BAIXOS (HOLANDA)": "Netherlands",
+        "PASES BAIXOS (HOLANDA)": "Netherlands",
         "ARGELIA": "Algeria",
         "ARGENTINA": "Argentina",
+        "ESPANHA": "Spain",
+        "FINLANDIA": "Finland",
+        "ITALIA": "Italy",
     }.get(origin, clean(value).title())
 
 
-def parse_clearances(path_or_bytes: Path | bytes) -> tuple[list[dict], str]:
+def parse_clearances(path_or_bytes: Path | bytes, year: int) -> tuple[list[dict], str]:
     workbook = openpyxl.load_workbook(path_or_bytes if isinstance(path_or_bytes, Path) else io.BytesIO(path_or_bytes), read_only=True, data_only=True)
     sheet = next(sheet for sheet in workbook.worksheets if clean(sheet.title).upper().startswith("DESEMB"))
+    headers = [clean(value).upper() for value in next(sheet.iter_rows(min_row=3, max_row=3, values_only=True))]
+    importer_index = headers.index("IMPORTADOR")
+    ncm_index = headers.index("NCM")
+    customs_index = next(index for index, value in enumerate(headers) if value.startswith("UA DESPACHO"))
+    origin_index = next(index for index, value in enumerate(headers) if "ORIGEM" in value)
+    kilos_index = next(index for index, value in enumerate(headers) if "QUILOS" in value)
     grouped: dict[int, dict] = {}
     for row in sheet.iter_rows(min_row=4, values_only=True):
-        month, importer, _, _, ncm, _, customs_office, origin, kilos = row[:9]
+        month = row[0]
+        importer = row[importer_index]
+        ncm = row[ncm_index]
+        customs_office = row[customs_index]
+        origin = row[origin_index]
+        kilos = row[kilos_index]
         if "BRASKEM" not in clean(importer).upper() or clean(ncm) != "27101241":
             continue
         month_number = int(month)
@@ -179,7 +198,7 @@ def parse_clearances(path_or_bytes: Path | bytes) -> tuple[list[dict], str]:
             "basis": "customs",
         })
     latest = max(grouped)
-    clearance_through = f"2026-{latest:02d}-{monthrange(2026, latest)[1]:02d}"
+    clearance_through = f"{year}-{latest:02d}-{monthrange(year, latest)[1]:02d}"
     return monthly, clearance_through
 
 
@@ -190,18 +209,30 @@ def main() -> None:
 
     existing = load_existing()
     arrivals, completed = parse_codeba(download(CODEBA_ARATU), existing)
-    clearance_source: Path | bytes = args.clearance_file if args.clearance_file else download(ANP_CLEARANCES)
-    monthly, clearance_through = parse_clearances(clearance_source)
+    annual_history = []
+    for year in sorted(ANP_CLEARANCES):
+        clearance_source: Path | bytes = args.clearance_file if year == 2026 and args.clearance_file else download(ANP_CLEARANCES[year])
+        year_monthly, year_clearance = parse_clearances(clearance_source, year)
+        annual_history.append({
+            "year": year,
+            "clearance_through": year_clearance,
+            "monthly": year_monthly,
+        })
+
+    current_history = next(item for item in annual_history if item["year"] == 2026)
+    monthly = current_history["monthly"]
+    clearance_through = current_history["clearance_through"]
     payload = {
         "generated_at": datetime.now(ZoneInfo("America/Bahia")).isoformat(timespec="seconds"),
         "clearance_through": clearance_through,
         "arrivals": arrivals,
         "completed_vessels": completed,
         "monthly": monthly,
+        "annual_history": annual_history,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {OUTPUT}: {len(arrivals)} live calls, {len(completed)} completed calls, {len(monthly)} months")
+    print(f"Wrote {OUTPUT}: {len(arrivals)} live calls, {len(completed)} completed calls, {len(monthly)} current-year months, {len(annual_history)} years")
 
 
 if __name__ == "__main__":

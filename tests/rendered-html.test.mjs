@@ -46,4 +46,7 @@ test("published customs data remains expressed in kilotonnes", async () => {
   assert.ok(dashboard.monthly.length >= 8);
   assert.ok(dashboard.monthly.every((month) => month.total_kt < 1000));
   assert.ok(ytdKt > 1000 && ytdKt < 5000);
+  assert.deepEqual(dashboard.annual_history.map((history) => history.year), [2024, 2025, 2026]);
+  assert.equal(dashboard.annual_history.find((history) => history.year === 2024).monthly.length, 12);
+  assert.ok(dashboard.annual_history.every((history) => history.monthly.every((month) => month.total_kt < 1000)));
 });
