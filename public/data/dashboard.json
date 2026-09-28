@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-28T02:28:22-03:00",
+  "generated_at": "2026-09-28T11:01:19-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
       "id": "440892026",
       "vessel": "BEAUTIFUL FUTURE",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-09-24T12:00:00-03:00",
       "etb": "2026-09-26T00:00:00-03:00",
       "etd": "2026-09-30T00:00:00-03:00",
