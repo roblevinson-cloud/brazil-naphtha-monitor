@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T10:21:50-03:00",
+  "generated_at": "2026-10-01T16:34:10-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
@@ -8,10 +8,10 @@
       "status": "discharging",
       "eta": "2026-09-24T12:00:00-03:00",
       "etb": "2026-09-26T00:00:00-03:00",
-      "etd": "2026-09-30T00:00:00-03:00",
+      "etd": "2026-10-01T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
-      "cargo_tonnes": 28000.0,
+      "cargo_tonnes": 56617.101,
       "dwt_tonnes": 74500,
       "operator": "Braskem S.A.",
       "cargo_origin": null,
@@ -23,7 +23,7 @@
       "id": "462002026",
       "vessel": "BLOOMING FUTURE",
       "status": "scheduled",
-      "eta": "2026-10-02T11:00:00-03:00",
+      "eta": "2026-10-02T09:00:00-03:00",
       "etb": "2026-10-03T00:00:00-03:00",
       "etd": "2026-10-04T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
