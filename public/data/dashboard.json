@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T14:00:41-03:00",
+  "generated_at": "2026-10-09T19:41:24-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
@@ -62,7 +62,7 @@
       "etd": "2026-10-18T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
-      "cargo_tonnes": 28000.0,
+      "cargo_tonnes": 60414.76,
       "dwt_tonnes": 82397,
       "operator": "Braskem S.A.",
       "cargo_origin": null,
