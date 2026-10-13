@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-13T03:49:51-03:00",
+  "generated_at": "2026-10-13T13:02:39-03:00",
   "clearance_through": "2026-08-31",
   "arrivals": [
     {
       "id": "462002026",
       "vessel": "BLOOMING FUTURE",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-10-02T09:00:00-03:00",
-      "etb": "2026-10-13T00:00:00-03:00",
+      "etb": "2026-10-12T00:00:00-03:00",
       "etd": "2026-10-14T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
