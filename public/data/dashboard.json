@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-14T04:41:18-03:00",
-  "clearance_through": "2026-08-31",
+  "generated_at": "2026-10-14T10:46:04-03:00",
+  "clearance_through": "2026-09-30",
   "arrivals": [
     {
       "id": "462002026",
@@ -56,7 +56,7 @@
     {
       "id": "483712026",
       "vessel": "CLYDE",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-10-14T12:00:00-03:00",
       "etb": "2026-10-18T00:00:00-03:00",
       "etd": "2026-10-19T00:00:00-03:00",
@@ -379,7 +379,7 @@
           "kt": 57.965585
         },
         {
-          "name": "Netherlands",
+          "name": "Holanda",
           "kt": 37.279628
         }
       ],
@@ -429,8 +429,8 @@
       "month": 8,
       "label": "Aug",
       "bahia_kt": 128.61044,
-      "rio_grande_do_sul_kt": 111.783223,
-      "total_kt": 240.393663,
+      "rio_grande_do_sul_kt": 111.812043,
+      "total_kt": 240.422483,
       "origins": [
         {
           "name": "United States",
@@ -438,11 +438,33 @@
         },
         {
           "name": "Algeria",
-          "kt": 85.411854
+          "kt": 85.440674
         },
         {
           "name": "Argentina",
           "kt": 26.371369
+        }
+      ],
+      "basis": "customs"
+    },
+    {
+      "month": 9,
+      "label": "Sep",
+      "bahia_kt": 205.821005,
+      "rio_grande_do_sul_kt": 26.425422,
+      "total_kt": 232.246427,
+      "origins": [
+        {
+          "name": "United States",
+          "kt": 171.72365
+        },
+        {
+          "name": "Canary Islands",
+          "kt": 34.097355
+        },
+        {
+          "name": "Argentina",
+          "kt": 26.425422
         }
       ],
       "basis": "customs"
@@ -909,7 +931,7 @@
     },
     {
       "year": 2026,
-      "clearance_through": "2026-08-31",
+      "clearance_through": "2026-09-30",
       "monthly": [
         {
           "month": 1,
@@ -995,7 +1017,7 @@
               "kt": 57.965585
             },
             {
-              "name": "Netherlands",
+              "name": "Holanda",
               "kt": 37.279628
             }
           ],
@@ -1045,8 +1067,8 @@
           "month": 8,
           "label": "Aug",
           "bahia_kt": 128.61044,
-          "rio_grande_do_sul_kt": 111.783223,
-          "total_kt": 240.393663,
+          "rio_grande_do_sul_kt": 111.812043,
+          "total_kt": 240.422483,
           "origins": [
             {
               "name": "United States",
@@ -1054,11 +1076,33 @@
             },
             {
               "name": "Algeria",
-              "kt": 85.411854
+              "kt": 85.440674
             },
             {
               "name": "Argentina",
               "kt": 26.371369
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 9,
+          "label": "Sep",
+          "bahia_kt": 205.821005,
+          "rio_grande_do_sul_kt": 26.425422,
+          "total_kt": 232.246427,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 171.72365
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 34.097355
+            },
+            {
+              "name": "Argentina",
+              "kt": 26.425422
             }
           ],
           "basis": "customs"
