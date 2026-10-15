@@ -1,30 +1,13 @@
 {
-  "generated_at": "2026-10-15T08:34:23-03:00",
+  "generated_at": "2026-10-15T14:04:39-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
-      "id": "462002026",
-      "vessel": "BLOOMING FUTURE",
-      "status": "discharging",
-      "eta": "2026-10-02T09:00:00-03:00",
-      "etb": "2026-10-12T00:00:00-03:00",
-      "etd": "2026-10-14T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 28000.0,
-      "dwt_tonnes": null,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Portugal",
-      "fleet": "future",
-      "source": "CODEBA"
-    },
-    {
       "id": "443822026",
       "vessel": "PINE OLIA",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-09-30T09:00:00-03:00",
-      "etb": "2026-10-15T00:00:00-03:00",
+      "etb": "2026-10-14T00:00:00-03:00",
       "etd": "2026-10-15T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
@@ -243,23 +226,6 @@
       "source": "CODEBA"
     },
     {
-      "id": "462002026",
-      "vessel": "BLOOMING FUTURE",
-      "status": "completed",
-      "eta": "2026-10-02T09:00:00-03:00",
-      "etb": "2026-10-03T00:00:00-03:00",
-      "etd": "2026-10-04T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 28000.0,
-      "dwt_tonnes": null,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Portugal",
-      "fleet": "future",
-      "source": "CODEBA"
-    },
-    {
       "id": "443822026",
       "vessel": "PINE OLIA",
       "status": "completed",
@@ -291,6 +257,23 @@
       "cargo_origin": null,
       "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "462002026",
+      "vessel": "BLOOMING FUTURE",
+      "status": "completed",
+      "eta": "2026-10-02T09:00:00-03:00",
+      "etb": "2026-10-12T00:00:00-03:00",
+      "etd": "2026-10-14T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 28000.0,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Portugal",
+      "fleet": "future",
       "source": "CODEBA"
     }
   ],
