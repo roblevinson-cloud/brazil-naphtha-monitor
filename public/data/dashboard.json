@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T01:45:35-03:00",
+  "generated_at": "2026-10-19T10:23:11-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
@@ -7,8 +7,8 @@
       "vessel": "BAIACU",
       "status": "discharging",
       "eta": "2026-10-06T08:00:00-03:00",
-      "etb": "2026-10-17T00:00:00-03:00",
-      "etd": "2026-10-18T00:00:00-03:00",
+      "etb": "2026-10-18T00:00:00-03:00",
+      "etd": "2026-10-20T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 60414.76,
@@ -20,12 +20,29 @@
       "source": "CODEBA"
     },
     {
+      "id": "443822026",
+      "vessel": "PINE OLIA",
+      "status": "anchored",
+      "eta": "2026-09-30T09:00:00-03:00",
+      "etb": "2026-10-19T00:00:00-03:00",
+      "etd": "2029-10-20T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 7700.0,
+      "dwt_tonnes": 50275,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
       "id": "483712026",
       "vessel": "CLYDE",
       "status": "anchored",
       "eta": "2026-10-14T12:00:00-03:00",
-      "etb": "2026-10-18T00:00:00-03:00",
-      "etd": "2026-10-19T00:00:00-03:00",
+      "etb": "2026-10-24T00:00:00-03:00",
+      "etd": "2026-10-25T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 27600.0,
