@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T10:23:11-03:00",
+  "generated_at": "2026-10-19T16:58:15-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
@@ -8,7 +8,7 @@
       "status": "discharging",
       "eta": "2026-10-06T08:00:00-03:00",
       "etb": "2026-10-18T00:00:00-03:00",
-      "etd": "2026-10-20T00:00:00-03:00",
+      "etd": "2026-10-19T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 60414.76,
