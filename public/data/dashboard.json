@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T10:50:50-03:00",
+  "generated_at": "2026-10-21T15:41:09-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
@@ -7,8 +7,8 @@
       "vessel": "PINE OLIA",
       "status": "anchored",
       "eta": "2026-09-30T09:00:00-03:00",
-      "etb": "2026-10-20T00:00:00-03:00",
-      "etd": "2029-10-21T00:00:00-03:00",
+      "etb": "2026-10-21T00:00:00-03:00",
+      "etd": "2029-10-22T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 7700.0,
