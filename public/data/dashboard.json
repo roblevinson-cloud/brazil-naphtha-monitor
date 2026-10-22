@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T20:23:30-03:00",
+  "generated_at": "2026-10-22T08:58:35-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
@@ -22,10 +22,10 @@
     {
       "id": "454222026",
       "vessel": "BAIACU",
-      "status": "scheduled",
+      "status": "discharging",
       "eta": "2026-10-06T08:00:00-03:00",
-      "etb": "2026-10-23T00:00:00-03:00",
-      "etd": "2026-10-24T00:00:00-03:00",
+      "etb": "2026-10-21T00:00:00-03:00",
+      "etd": "2026-10-23T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 60414.76,
@@ -67,6 +67,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Singapura",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "506162026",
+      "vessel": "GEM LATOYA",
+      "status": "scheduled",
+      "eta": "2026-10-29T11:30:00-03:00",
+      "etb": "",
+      "etd": "2026-11-05T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 0.0,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
       "source": "CODEBA"
     }
