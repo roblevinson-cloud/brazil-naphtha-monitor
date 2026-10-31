@@ -1,24 +1,7 @@
 {
-  "generated_at": "2026-10-31T02:48:23-03:00",
+  "generated_at": "2026-10-31T09:38:14-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
-    {
-      "id": "499842026",
-      "vessel": "HAFNIA ANDREA",
-      "status": "discharging",
-      "eta": "2026-10-23T20:00:00-03:00",
-      "etb": "2026-10-28T00:00:00-03:00",
-      "etd": "2026-10-30T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 36196.548,
-      "dwt_tonnes": null,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Singapura",
-      "fleet": "third_party",
-      "source": "CODEBA"
-    },
     {
       "id": "483712026",
       "vessel": "CLYDE",
@@ -307,6 +290,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "499842026",
+      "vessel": "HAFNIA ANDREA",
+      "status": "completed",
+      "eta": "2026-10-23T20:00:00-03:00",
+      "etb": "2026-10-28T00:00:00-03:00",
+      "etd": "2026-10-30T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 36196.548,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Singapura",
       "fleet": "third_party",
       "source": "CODEBA"
     }
