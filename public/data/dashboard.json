@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-03T23:22:19-03:00",
+  "generated_at": "2026-11-04T09:12:00-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
     {
       "id": "483712026",
       "vessel": "CLYDE",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-10-14T12:00:00-03:00",
-      "etb": "2026-11-03T00:00:00-03:00",
+      "etb": "2026-11-04T00:00:00-03:00",
       "etd": "2026-11-05T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
