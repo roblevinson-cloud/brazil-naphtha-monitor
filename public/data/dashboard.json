@@ -1,24 +1,7 @@
 {
-  "generated_at": "2026-11-08T06:02:27-03:00",
+  "generated_at": "2026-11-08T13:41:55-03:00",
   "clearance_through": "2026-09-30",
   "arrivals": [
-    {
-      "id": "506162026",
-      "vessel": "GEM LATOYA",
-      "status": "discharging",
-      "eta": "2026-11-02T05:00:00-03:00",
-      "etb": "2026-11-06T00:00:00-03:00",
-      "etd": "2026-11-07T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 27690.102,
-      "dwt_tonnes": null,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Marshall Islands",
-      "fleet": "third_party",
-      "source": "CODEBA"
-    },
     {
       "id": "507192026",
       "vessel": "CIELO BIANCO",
@@ -324,6 +307,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Liberia",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "506162026",
+      "vessel": "GEM LATOYA",
+      "status": "completed",
+      "eta": "2026-11-02T05:00:00-03:00",
+      "etb": "2026-11-06T00:00:00-03:00",
+      "etd": "2026-11-07T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 27690.102,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
       "source": "CODEBA"
     }
