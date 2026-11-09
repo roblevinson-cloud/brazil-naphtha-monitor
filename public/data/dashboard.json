@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T06:51:36-03:00",
-  "clearance_through": "2026-09-30",
+  "generated_at": "2026-11-09T17:47:23-03:00",
+  "clearance_through": "2026-10-31",
   "arrivals": [
     {
       "id": "507192026",
@@ -34,6 +34,23 @@
       "cargo_origin": null,
       "vessel_flag": "Portugal",
       "fleet": "future",
+      "source": "CODEBA"
+    },
+    {
+      "id": "536202026",
+      "vessel": "TWEED",
+      "status": "scheduled",
+      "eta": "2026-11-12T12:00:00-03:00",
+      "etb": "2026-11-20T00:00:00-03:00",
+      "etd": "2026-11-21T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 27600.0,
+      "dwt_tonnes": null,
+      "operator": "TBN · probable Braskem",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
       "source": "CODEBA"
     }
   ],
@@ -413,7 +430,7 @@
           "kt": 57.965585
         },
         {
-          "name": "Holanda",
+          "name": "Netherlands",
           "kt": 37.279628
         }
       ],
@@ -484,9 +501,9 @@
     {
       "month": 9,
       "label": "Sep",
-      "bahia_kt": 205.821005,
+      "bahia_kt": 206.089004,
       "rio_grande_do_sul_kt": 26.425422,
-      "total_kt": 232.246427,
+      "total_kt": 232.514426,
       "origins": [
         {
           "name": "United States",
@@ -494,11 +511,29 @@
         },
         {
           "name": "Canary Islands",
-          "kt": 34.097355
+          "kt": 34.365354
         },
         {
           "name": "Argentina",
           "kt": 26.425422
+        }
+      ],
+      "basis": "customs"
+    },
+    {
+      "month": 10,
+      "label": "Oct",
+      "bahia_kt": 222.461054,
+      "rio_grande_do_sul_kt": 56.127951,
+      "total_kt": 278.589005,
+      "origins": [
+        {
+          "name": "United States",
+          "kt": 203.984993
+        },
+        {
+          "name": "Canary Islands",
+          "kt": 74.604012
         }
       ],
       "basis": "customs"
@@ -965,7 +1000,7 @@
     },
     {
       "year": 2026,
-      "clearance_through": "2026-09-30",
+      "clearance_through": "2026-10-31",
       "monthly": [
         {
           "month": 1,
@@ -1051,7 +1086,7 @@
               "kt": 57.965585
             },
             {
-              "name": "Holanda",
+              "name": "Netherlands",
               "kt": 37.279628
             }
           ],
@@ -1122,9 +1157,9 @@
         {
           "month": 9,
           "label": "Sep",
-          "bahia_kt": 205.821005,
+          "bahia_kt": 206.089004,
           "rio_grande_do_sul_kt": 26.425422,
-          "total_kt": 232.246427,
+          "total_kt": 232.514426,
           "origins": [
             {
               "name": "United States",
@@ -1132,11 +1167,29 @@
             },
             {
               "name": "Canary Islands",
-              "kt": 34.097355
+              "kt": 34.365354
             },
             {
               "name": "Argentina",
               "kt": 26.425422
+            }
+          ],
+          "basis": "customs"
+        },
+        {
+          "month": 10,
+          "label": "Oct",
+          "bahia_kt": 222.461054,
+          "rio_grande_do_sul_kt": 56.127951,
+          "total_kt": 278.589005,
+          "origins": [
+            {
+              "name": "United States",
+              "kt": 203.984993
+            },
+            {
+              "name": "Canary Islands",
+              "kt": 74.604012
             }
           ],
           "basis": "customs"
