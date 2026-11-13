@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-13T06:35:23-03:00",
+  "generated_at": "2026-11-13T14:46:56-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
       "id": "536202026",
       "vessel": "TWEED",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-11-13T10:00:00-03:00",
       "etb": "2026-11-16T00:00:00-03:00",
       "etd": "2026-11-17T00:00:00-03:00",
