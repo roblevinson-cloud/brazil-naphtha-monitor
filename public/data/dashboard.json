@@ -1,7 +1,24 @@
 {
-  "generated_at": "2026-11-15T14:13:40-03:00",
+  "generated_at": "2026-11-15T19:51:58-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
+    {
+      "id": "532612026",
+      "vessel": "BEAUTIFUL FUTURE",
+      "status": "scheduled",
+      "eta": "2026-11-13T10:00:00-03:00",
+      "etb": "2026-11-14T00:00:00-03:00",
+      "etd": "2026-11-15T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 28957.996,
+      "dwt_tonnes": 74500,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Portugal",
+      "fleet": "future",
+      "source": "CODEBA"
+    },
     {
       "id": "536202026",
       "vessel": "TWEED",
@@ -17,23 +34,6 @@
       "cargo_origin": null,
       "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
-      "source": "CODEBA"
-    },
-    {
-      "id": "532612026",
-      "vessel": "BEAUTIFUL FUTURE",
-      "status": "scheduled",
-      "eta": "2026-11-13T10:00:00-03:00",
-      "etb": "2026-11-21T00:00:00-03:00",
-      "etd": "2026-11-22T00:00:00-03:00",
-      "port": "Aratu-Candeias · BA",
-      "terminal": "TPG",
-      "cargo_tonnes": 28957.997,
-      "dwt_tonnes": 74500,
-      "operator": "Braskem S.A.",
-      "cargo_origin": null,
-      "vessel_flag": "Portugal",
-      "fleet": "future",
       "source": "CODEBA"
     },
     {
