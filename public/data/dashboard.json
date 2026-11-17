@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T10:30:01-03:00",
+  "generated_at": "2026-11-17T19:26:41-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
@@ -7,8 +7,8 @@
       "vessel": "TWEED",
       "status": "anchored",
       "eta": "2026-11-13T10:00:00-03:00",
-      "etb": "2026-11-16T00:00:00-03:00",
-      "etd": "2026-11-18T00:00:00-03:00",
+      "etb": "2026-11-18T00:00:00-03:00",
+      "etd": "2026-11-19T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 27600.0,
