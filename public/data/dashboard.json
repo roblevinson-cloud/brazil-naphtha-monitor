@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T04:34:03-03:00",
+  "generated_at": "2026-11-18T14:17:28-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
@@ -16,6 +16,23 @@
       "operator": "TBN · probable Braskem",
       "cargo_origin": null,
       "vessel_flag": "Marshall Islands",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "554782026",
+      "vessel": "CLYDE",
+      "status": "scheduled",
+      "eta": "2026-11-20T12:00:00-03:00",
+      "etb": "",
+      "etd": "2026-11-25T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 0.0,
+      "dwt_tonnes": null,
+      "operator": "TBN · probable Braskem",
+      "cargo_origin": null,
+      "vessel_flag": "Liberia",
       "fleet": "third_party",
       "source": "CODEBA"
     },
