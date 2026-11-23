@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-23T06:57:59-03:00",
+  "generated_at": "2026-11-23T17:16:40-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
       "id": "532612026",
       "vessel": "BEAUTIFUL FUTURE",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-11-13T10:00:00-03:00",
       "etb": "2026-11-23T00:00:00-03:00",
       "etd": "2026-11-24T00:00:00-03:00",
@@ -40,7 +40,7 @@
       "id": "554782026",
       "vessel": "CLYDE",
       "status": "scheduled",
-      "eta": "2026-11-20T12:00:00-03:00",
+      "eta": "2026-11-29T12:00:00-03:00",
       "etb": "2026-11-29T00:00:00-03:00",
       "etd": "2026-11-30T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
@@ -50,6 +50,23 @@
       "operator": "TBN · probable Braskem",
       "cargo_origin": null,
       "vessel_flag": "Liberia",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "536202026",
+      "vessel": "TWEED",
+      "status": "anchored",
+      "eta": "2026-11-13T10:00:00-03:00",
+      "etb": "2026-12-02T00:00:00-03:00",
+      "etd": "2026-12-03T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 27600.0,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Marshall Islands",
       "fleet": "third_party",
       "source": "CODEBA"
     }
@@ -1219,8 +1236,8 @@
       "name": "CODEBA Aratu line-up",
       "url": "https://codeba.gov.br/eficiente/sites/portalcodeba/pt-br/porto_aratu.php?secao=tportos_aratu",
       "ok": true,
-      "fetched_at": "2026-11-23T06:57:59-03:00",
-      "checked_at": "2026-11-23T06:57:59-03:00",
+      "fetched_at": "2026-11-23T17:16:40-03:00",
+      "checked_at": "2026-11-23T17:16:40-03:00",
       "error": null
     },
     {
@@ -1228,7 +1245,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-23T06:57:59-03:00",
+      "checked_at": "2026-11-23T17:16:40-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1236,7 +1253,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-23T06:57:59-03:00",
+      "checked_at": "2026-11-23T17:16:40-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1244,7 +1261,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-23T06:57:59-03:00",
+      "checked_at": "2026-11-23T17:16:40-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     }
   ]
