@@ -32,6 +32,15 @@ export type AnnualHistory = {
   monthly: MonthlyDelivery[];
 };
 
+export type SourceStatus = {
+  name: string;
+  url: string;
+  ok: boolean;
+  fetched_at: string | null;
+  checked_at: string;
+  error: string | null;
+};
+
 export type MonitorData = {
   generated_at: string;
   clearance_through: string;
@@ -39,6 +48,7 @@ export type MonitorData = {
   completed_vessels: Arrival[];
   monthly: MonthlyDelivery[];
   annual_history?: AnnualHistory[];
+  source_status?: SourceStatus[];
 };
 
 export const initialData: MonitorData = {

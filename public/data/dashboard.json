@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T09:42:35-03:00",
+  "generated_at": "2026-11-23T06:55:31-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
@@ -1212,6 +1212,40 @@
           "basis": "customs"
         }
       ]
+    }
+  ],
+  "source_status": [
+    {
+      "name": "CODEBA Aratu line-up",
+      "url": "https://codeba.gov.br/eficiente/sites/portalcodeba/pt-br/porto_aratu.php?secao=tportos_aratu",
+      "ok": true,
+      "fetched_at": "2026-11-23T06:55:31-03:00",
+      "checked_at": "2026-11-23T06:55:31-03:00",
+      "error": null
+    },
+    {
+      "name": "ANP import clearances 2024",
+      "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx",
+      "ok": true,
+      "fetched_at": "2026-11-23T06:55:31-03:00",
+      "checked_at": "2026-11-23T06:55:31-03:00",
+      "error": null
+    },
+    {
+      "name": "ANP import clearances 2025",
+      "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx",
+      "ok": true,
+      "fetched_at": "2026-11-23T06:55:31-03:00",
+      "checked_at": "2026-11-23T06:55:31-03:00",
+      "error": null
+    },
+    {
+      "name": "ANP import clearances 2026",
+      "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx",
+      "ok": true,
+      "fetched_at": "2026-11-23T06:55:31-03:00",
+      "checked_at": "2026-11-23T06:55:31-03:00",
+      "error": null
     }
   ]
 }

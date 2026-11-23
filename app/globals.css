@@ -26,6 +26,8 @@ main { width: min(1540px, 100%); min-height: 100vh; margin: 0 auto; padding: 28p
 .eyebrow.accent { color: #617900; }
 .live-pill { margin-left: auto; padding: 9px 12px; border: 0; border-radius: 99px; background: var(--paper-2); color: var(--ink); font: 700 11px/1 monospace; cursor: pointer; }
 .live-pill:disabled { cursor: wait; opacity: .75; }
+.source-alert { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 -8px; padding: 10px 14px; border-left: 3px solid var(--amber); background: #ffbb3114; color: var(--ink); font: 500 12px/1.4 monospace; }
+.source-alert b { font-size: 10px; letter-spacing: .14em; }
 .live-pill span { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px #ffbb3120; }
 .live-pill.live span { background: var(--green); box-shadow: 0 0 0 4px #46bf5520; }
 .live-pill.refreshing span { animation: pulse 1s infinite; }

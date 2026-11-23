@@ -7,6 +7,8 @@ import argparse
 import io
 import json
 import ssl
+import sys
+import time
 import unicodedata
 import urllib.request
 from calendar import monthrange
@@ -48,16 +50,46 @@ def clean(value: object) -> str:
     return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().strip()
 
 
-def download(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "Brazil-Naphtha-Monitor/1.0"})
-    try:
-        with urllib.request.urlopen(request, timeout=90) as response:
-            return response.read()
-    except Exception:
-        # Some Windows runners fail the gov.br certificate chain; keep the
-        # fallback scoped to these public, checksummed source snapshots.
-        with urllib.request.urlopen(request, context=ssl._create_unverified_context(), timeout=90) as response:
-            return response.read()
+USER_AGENT = "Mozilla/5.0 (compatible; Brazil-Naphtha-Monitor/1.1; +https://roblevinson-cloud.github.io/brazil-naphtha-monitor/)"
+
+
+class SourceUnavailable(RuntimeError):
+    """Raised when an official source cannot be fetched after retries."""
+
+
+def download(url: str, attempts: int = 4) -> bytes:
+    """Fetch a source with retries.
+
+    gov.br intermittently resets connections from cloud runners, so each
+    attempt is retried with backoff before the caller falls back to the
+    previous snapshot. The unverified-SSL retry is kept for Windows machines
+    whose trust store lacks the gov.br chain.
+    """
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        for context in (None, ssl._create_unverified_context()):
+            try:
+                with urllib.request.urlopen(request, context=context, timeout=90) as response:
+                    return response.read()
+            except Exception as error:  # noqa: BLE001 - any transport failure is retried
+                last_error = error
+        if attempt < attempts - 1:
+            time.sleep(min(5 * 2**attempt, 40))
+    raise SourceUnavailable(f"{url}: {last_error}") from last_error
+
+
+def source_record(name: str, url: str, previous: dict | None, *, ok: bool, error: str | None, now: str) -> dict:
+    """Describe one source fetch, carrying the last successful fetch time forward."""
+    previous = previous or {}
+    return {
+        "name": name,
+        "url": url,
+        "ok": ok,
+        "fetched_at": now if ok else previous.get("fetched_at"),
+        "checked_at": now,
+        "error": None if ok else error,
+    }
 
 
 def iso_bahia(value: object) -> str:
@@ -82,7 +114,7 @@ def normalize_flag(value: object) -> str:
 
 def load_existing() -> dict:
     if not OUTPUT.exists():
-        return {"arrivals": [], "completed_vessels": SEED_COMPLETED}
+        return {"arrivals": [], "completed_vessels": SEED_COMPLETED, "annual_history": [], "source_status": []}
     return json.loads(OUTPUT.read_text(encoding="utf-8"))
 
 
@@ -208,31 +240,64 @@ def main() -> None:
     args = parser.parse_args()
 
     existing = load_existing()
-    arrivals, completed = parse_codeba(download(CODEBA_ARATU), existing)
+    previous_status = {item["name"]: item for item in existing.get("source_status", [])}
+    now = datetime.now(ZoneInfo("America/Bahia")).isoformat(timespec="seconds")
+    status: list[dict] = []
+    fetched_any = False
+
+    codeba_name = "CODEBA Aratu line-up"
+    try:
+        arrivals, completed = parse_codeba(download(CODEBA_ARATU), existing)
+        status.append(source_record(codeba_name, CODEBA_ARATU, previous_status.get(codeba_name), ok=True, error=None, now=now))
+        fetched_any = True
+    except Exception as error:  # noqa: BLE001 - keep the previous board rather than fail the run
+        print(f"WARNING: CODEBA unavailable, keeping previous arrival board: {error}", file=sys.stderr)
+        arrivals = existing.get("arrivals", [])
+        completed = existing.get("completed_vessels", SEED_COMPLETED)
+        status.append(source_record(codeba_name, CODEBA_ARATU, previous_status.get(codeba_name), ok=False, error=str(error)[:300], now=now))
+
+    previous_history = {item["year"]: item for item in existing.get("annual_history", [])}
     annual_history = []
     for year in sorted(ANP_CLEARANCES):
-        clearance_source: Path | bytes = args.clearance_file if year == 2026 and args.clearance_file else download(ANP_CLEARANCES[year])
-        year_monthly, year_clearance = parse_clearances(clearance_source, year)
-        annual_history.append({
-            "year": year,
-            "clearance_through": year_clearance,
-            "monthly": year_monthly,
-        })
+        name = f"ANP import clearances {year}"
+        url = ANP_CLEARANCES[year]
+        try:
+            clearance_source: Path | bytes = args.clearance_file if year == 2026 and args.clearance_file else download(url)
+            year_monthly, year_clearance = parse_clearances(clearance_source, year)
+            annual_history.append({"year": year, "clearance_through": year_clearance, "monthly": year_monthly})
+            status.append(source_record(name, url, previous_status.get(name), ok=True, error=None, now=now))
+            fetched_any = True
+        except Exception as error:  # noqa: BLE001 - keep the previous customs record for that year
+            print(f"WARNING: {name} unavailable, keeping previous customs record: {error}", file=sys.stderr)
+            if year in previous_history:
+                annual_history.append(previous_history[year])
+            elif year == 2026 and existing.get("monthly"):
+                annual_history.append({"year": year, "clearance_through": existing.get("clearance_through", ""), "monthly": existing["monthly"]})
+            status.append(source_record(name, url, previous_status.get(name), ok=False, error=str(error)[:300], now=now))
 
-    current_history = next(item for item in annual_history if item["year"] == 2026)
+    if not fetched_any:
+        print("ERROR: no official source could be fetched; snapshot left unchanged", file=sys.stderr)
+        sys.exit(1)
+
+    current_history = next((item for item in annual_history if item["year"] == 2026), None)
+    if current_history is None:
+        print("ERROR: no 2026 customs record available; snapshot left unchanged", file=sys.stderr)
+        sys.exit(1)
     monthly = current_history["monthly"]
     clearance_through = current_history["clearance_through"]
     payload = {
-        "generated_at": datetime.now(ZoneInfo("America/Bahia")).isoformat(timespec="seconds"),
+        "generated_at": now,
         "clearance_through": clearance_through,
         "arrivals": arrivals,
         "completed_vessels": completed,
         "monthly": monthly,
         "annual_history": annual_history,
+        "source_status": status,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {OUTPUT}: {len(arrivals)} live calls, {len(completed)} completed calls, {len(monthly)} current-year months, {len(annual_history)} years")
+    failed = [item["name"] for item in status if not item["ok"]]
+    print(f"Wrote {OUTPUT}: {len(arrivals)} live calls, {len(completed)} completed calls, {len(monthly)} current-year months, {len(annual_history)} years" + (f"; stale sources: {', '.join(failed)}" if failed else ""))
 
 
 if __name__ == "__main__":

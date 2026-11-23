@@ -413,6 +413,8 @@ export function NaphthaMonitor() {
   const latestIdentifiedLabel = latestIdentified ? new Date(latestIdentified).toLocaleDateString("en-US", { day: "numeric", month: "short", timeZone: "America/Bahia" }) : "current schedule";
   const latest90Range = data.monthly.slice(-3).map((month) => month.label).filter(Boolean);
   const prior90Range = data.monthly.slice(-6, -3).map((month) => month.label).filter(Boolean);
+  const staleSources = (data.source_status ?? []).filter((source) => !source.ok);
+  const staleLabel = (value: string | null) => value ? new Date(value).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Bahia" }) : "an earlier snapshot";
 
   return (
     <main>
@@ -423,6 +425,11 @@ export function NaphthaMonitor() {
           <span /> {feedState === "refreshing" ? "Refreshing…" : feedState === "live" ? `Live feed · ${updated}` : `Verified snapshot · ${updated}`}
         </button>
       </header>
+
+      {staleSources.length > 0 && <div className="source-alert" role="status">
+        <b>SOURCE NOTICE</b>
+        {staleSources.map((source) => <span key={source.name}>{source.name} could not be reached at the last refresh · showing the fetch from {staleLabel(source.fetched_at)}</span>)}
+      </div>}
 
       <nav className="tabs" aria-label="Monitor views">
         <button className={tab === "arrivals" ? "active" : ""} onClick={() => setTab("arrivals")}>Arrival board <b>{data.arrivals.length}</b></button>
