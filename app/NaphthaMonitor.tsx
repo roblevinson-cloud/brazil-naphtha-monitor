@@ -91,7 +91,9 @@ function isPlausibleSnapshot(value: unknown): value is MonitorData {
 }
 
 async function loadMonitorSnapshot() {
-  const urls = ["data/dashboard.json", REMOTE_DATA_URL];
+  // The raw GitHub copy is refreshed every two hours by the data workflow; the
+  // copy bundled with the Pages build only changes when the site is redeployed.
+  const urls = [REMOTE_DATA_URL, "data/dashboard.json"];
   for (const url of urls) {
     try {
       const response = await fetch(`${url}?t=${Date.now()}`, { cache: "no-store" });
