@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:57:15-03:00",
+  "generated_at": "2026-11-26T18:37:32-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
@@ -8,7 +8,7 @@
       "status": "anchored",
       "eta": "2026-10-30T23:00:00-03:00",
       "etb": "2026-11-26T00:00:00-03:00",
-      "etd": "2026-11-27T00:00:00-03:00",
+      "etd": "2026-11-28T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
       "terminal": "TPG",
       "cargo_tonnes": 57595.228,
@@ -22,7 +22,7 @@
     {
       "id": "554782026",
       "vessel": "CLYDE",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-11-26T13:00:00-03:00",
       "etb": "2026-11-29T00:00:00-03:00",
       "etd": "2026-11-30T00:00:00-03:00",
@@ -40,7 +40,7 @@
       "id": "561062026",
       "vessel": "PIS SUMATERA",
       "status": "scheduled",
-      "eta": "2026-11-26T14:00:00-03:00",
+      "eta": "2026-11-26T12:00:00-03:00",
       "etb": "2026-12-02T00:00:00-03:00",
       "etd": "2026-12-04T00:00:00-03:00",
       "port": "Aratu-Candeias · BA",
@@ -1236,8 +1236,8 @@
       "name": "CODEBA Aratu line-up",
       "url": "https://codeba.gov.br/eficiente/sites/portalcodeba/pt-br/porto_aratu.php?secao=tportos_aratu",
       "ok": true,
-      "fetched_at": "2026-11-26T07:57:15-03:00",
-      "checked_at": "2026-11-26T07:57:15-03:00",
+      "fetched_at": "2026-11-26T18:37:32-03:00",
+      "checked_at": "2026-11-26T18:37:32-03:00",
       "error": null
     },
     {
@@ -1245,7 +1245,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-26T07:57:15-03:00",
+      "checked_at": "2026-11-26T18:37:32-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1253,7 +1253,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-26T07:57:15-03:00",
+      "checked_at": "2026-11-26T18:37:32-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1261,7 +1261,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-26T07:57:15-03:00",
+      "checked_at": "2026-11-26T18:37:32-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     }
   ]
