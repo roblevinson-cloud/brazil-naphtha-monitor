@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-27T01:17:08-03:00",
+  "generated_at": "2026-11-27T11:00:11-03:00",
   "clearance_through": "2026-10-31",
   "arrivals": [
     {
       "id": "507192026",
       "vessel": "CIELO BIANCO",
-      "status": "anchored",
+      "status": "discharging",
       "eta": "2026-10-30T23:00:00-03:00",
       "etb": "2026-11-26T00:00:00-03:00",
       "etd": "2026-11-28T00:00:00-03:00",
@@ -39,7 +39,7 @@
     {
       "id": "561062026",
       "vessel": "PIS SUMATERA",
-      "status": "scheduled",
+      "status": "anchored",
       "eta": "2026-11-26T12:00:00-03:00",
       "etb": "2026-12-02T00:00:00-03:00",
       "etd": "2026-12-04T00:00:00-03:00",
@@ -50,6 +50,23 @@
       "operator": "Braskem S.A.",
       "cargo_origin": null,
       "vessel_flag": "Singapura",
+      "fleet": "third_party",
+      "source": "CODEBA"
+    },
+    {
+      "id": "569302026",
+      "vessel": "ISABELLA M II",
+      "status": "scheduled",
+      "eta": "2026-12-01T12:00:00-03:00",
+      "etb": "2026-12-04T00:00:00-03:00",
+      "etd": "2026-12-05T00:00:00-03:00",
+      "port": "Aratu-Candeias · BA",
+      "terminal": "TPG",
+      "cargo_tonnes": 0.0,
+      "dwt_tonnes": null,
+      "operator": "Braskem S.A.",
+      "cargo_origin": null,
+      "vessel_flag": "Liberia",
       "fleet": "third_party",
       "source": "CODEBA"
     }
@@ -1236,8 +1253,8 @@
       "name": "CODEBA Aratu line-up",
       "url": "https://codeba.gov.br/eficiente/sites/portalcodeba/pt-br/porto_aratu.php?secao=tportos_aratu",
       "ok": true,
-      "fetched_at": "2026-11-27T01:17:08-03:00",
-      "checked_at": "2026-11-27T01:17:08-03:00",
+      "fetched_at": "2026-11-27T11:00:11-03:00",
+      "checked_at": "2026-11-27T11:00:11-03:00",
       "error": null
     },
     {
@@ -1245,7 +1262,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-27T01:17:08-03:00",
+      "checked_at": "2026-11-27T11:00:11-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2024.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1253,7 +1270,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-27T01:17:08-03:00",
+      "checked_at": "2026-11-27T11:00:11-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2025.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
@@ -1261,7 +1278,7 @@
       "url": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx",
       "ok": false,
       "fetched_at": "2026-11-23T06:55:31-03:00",
-      "checked_at": "2026-11-27T01:17:08-03:00",
+      "checked_at": "2026-11-27T11:00:11-03:00",
       "error": "https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/arquivos-desembaracos/desembaraco-2026.xlsx: <urlopen error [Errno 104] Connection reset by peer>"
     }
   ]
